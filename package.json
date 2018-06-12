@@ -2,13 +2,13 @@
   "name": "dev-package-template",
   "version": "0.0.1",
   "description": "A quick way to start developing react packages.",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "flow": "flow",
     "favicon": "cpx \"src/docs/favicon.*\" \"docs\"",
     "dev": "webpack-dev-server --config dev/webpack.config.js --mode development",
-    "build:lib": "babel src/lib -d lib",
-    "build:docs": "webpack --mode production",
+    "build:lib": "babel src/lib -d dist",
+    "build:docs": "webpack --config dev/webpack.config.js --mode production",
     "build": "npm run build:lib && npm run build:docs && npm run favicon"
   },
   "keywords": [],
